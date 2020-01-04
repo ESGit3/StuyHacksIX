@@ -36,7 +36,6 @@ public class Main {
 
         frame.add(name);
         frame.add(duration);
-<<<<<<< Updated upstream
         frame.getContentPane().add(btnMon);
         frame.getContentPane().add(btnTues);
         frame.getContentPane().add(btnWed);
@@ -44,7 +43,6 @@ public class Main {
         frame.getContentPane().add(btnFri);
         frame.getContentPane().add(btnSat);
         frame.getContentPane().add(btnSun);
-=======
         frame.add(btnMon);
         frame.add(btnTues);
         frame.add(btnWed);
@@ -52,7 +50,6 @@ public class Main {
         frame.add(btnFri);
         frame.add(btnSat);
         frame.add(btnSun);
->>>>>>> Stashed changes
 
         frame.setLayout(null);
         frame.setVisible(true);
