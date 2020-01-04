@@ -7,7 +7,7 @@ import java.awt.event.*;
 public class Blocks {
     static GraphicsConfiguration gc;
     static JTextField name, duration;
-    static JCheckBox btnMon, btnTues, btnWed, btnThurs, btnFri, btnSat, btnSun;
+    static JCheckBox btnMon, btnTues, btnWed, btnThurs, btnFri, btnSat, btnSun, weekly, monthly, yearly;
     static JButton selectAll, Submit;
 
     public static void main(String[] args) {
@@ -24,6 +24,9 @@ public class Blocks {
         btnSun = new JCheckBox("Sunday");
         selectAll = new JButton("Select All");
         Submit = new JButton("Submit");
+        weekly = new JCheckBox("Weekly");
+        monthly = new JCheckBox("Monthly");
+        yearly = new JCheckBox("Yearly");
 
         selectAll.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent args) {
@@ -39,14 +42,17 @@ public class Blocks {
 
         name.setBounds(110, 50, 130, 30);
         duration.setBounds(300, 50, 130, 30);
-        btnMon.setBounds(100, 250, 100, 50);
-        btnTues.setBounds(200, 250, 100, 50);
-        btnWed.setBounds(300, 250, 100, 50);
-        btnThurs.setBounds(400, 250, 100, 50);
-        btnFri.setBounds(150, 300, 100, 50);
-        btnSat.setBounds(250, 300, 100, 50);
-        btnSun.setBounds(350, 300, 100, 50);
-        selectAll.setBounds(100, 375, 100, 50);
+        btnMon.setBounds(100, 150, 100, 50);
+        btnTues.setBounds(200, 150, 100, 50);
+        btnWed.setBounds(300, 150, 100, 50);
+        btnThurs.setBounds(400, 150, 100, 50);
+        btnFri.setBounds(150, 200, 100, 50);
+        btnSat.setBounds(250, 200, 100, 50);
+        btnSun.setBounds(350, 200, 100, 50);
+        selectAll.setBounds(100, 275, 100, 50);
+        weekly.setBounds(150, 375, 100, 50);
+        monthly.setBounds(250, 375, 100, 50);
+        yearly.setBounds(350, 375, 100, 50);
         Submit.setBounds(100, 450, 400, 50);
 
         frame.add(name);
@@ -60,6 +66,9 @@ public class Blocks {
         frame.add(btnSun);
         frame.add(selectAll);
         frame.add(Submit);
+        frame.add(weekly);
+        frame.add(monthly);
+        frame.add(yearly);
 
         frame.setLayout(null);
         frame.setVisible(true);
