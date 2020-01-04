@@ -24,7 +24,7 @@ public class Blacklist {
         path = new JLabel(chosenPath);
 
         chooseFile.setBounds(10, 10, 100, 30);
-        path.setBounds(300, 10);
+        path.setBounds(300, 10, 100, 30);
 
         frame.add(chooseFile);
         frame.add(path);
