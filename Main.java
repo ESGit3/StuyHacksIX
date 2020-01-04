@@ -25,7 +25,7 @@ public class Main {
         btnSun = new JButton("Sunday");
 
         name.setBounds(110, 50, 130, 30);
-        duration.setBounds(110, 50, 130, 30);
+        duration.setBounds(300, 50, 130, 30);
         btnMon.setBounds(10, 10, 100, 100);
         btnTues.setBounds(10, 10, 100, 100);
         btnWed.setBounds(10, 10, 100, 100);
@@ -44,7 +44,7 @@ public class Main {
 //        frame.getContentPane().add(btnSat);
 //        frame.getContentPane().add(btnSun);
 
-
+        frame.setLayout(null);
         frame.setVisible(true);
         frame.setSize(1000, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
