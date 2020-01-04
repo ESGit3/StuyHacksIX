@@ -9,9 +9,13 @@ public class Blocks {
     static JTextField name, duration;
     static JCheckBox btnMon, btnTues, btnWed, btnThurs, btnFri, btnSat, btnSun, weekly, monthly, yearly;
     static JButton selectAll, Submit;
+    static JFrame frame = new JFrame("Blocks");
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Blocks");
+    public static void openWindow() {
+        frame.setVisible(true);
+    }
+
+    static {
 
         name = new JTextField("name", 10);
         duration = new JTextField("duration", 10);
@@ -71,8 +75,6 @@ public class Blocks {
         frame.add(yearly);
 
         frame.setLayout(null);
-        frame.setVisible(true);
         frame.setSize(600, 600);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 }
