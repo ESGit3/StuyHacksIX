@@ -1,3 +1,4 @@
+package org.seq.tasks;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Blacklist {
 	
@@ -58,10 +60,12 @@ public class Blacklist {
 						other.index = i;
 						other.setLocation(0, i*25);
 					}
+					updateBlacklisted();
 					resizeFrame();
 				}
 				
 			});
+			updateBlacklisted();
 			resizeFrame();
 		}
 		
@@ -121,8 +125,24 @@ public class Blacklist {
     public static void openWindow() {
     	frame.setVisible(true);
     }
+    
+    static File[] blacklisted = updateBlacklisted();
+    
+    public static File[] updateBlacklisted() {
+    	blacklisted = new File[entries.size()];
+    	for (int i = 0; i < blacklisted.length; i++) {
+    		blacklisted[i] = entries.get(i).file;
+    	}
+    	return blacklisted;
+    }
+    
+    public static File[] getBlacklisted() {
+    	return blacklisted;
+    }
 
     public static void main(String[] args) throws Exception {
         openWindow();
+        Thread.sleep(30000);
+        System.out.println(Arrays.toString(getBlacklisted()));
     }
 }

@@ -1,3 +1,4 @@
+package org.seq.tasks;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import javax.swing.*;
