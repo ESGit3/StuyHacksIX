@@ -34,6 +34,7 @@ public class Main {
         btnSat.setBounds(250, 300, 100, 50);
         btnSun.setBounds(350, 300, 100, 50);
 
+<<<<<<< HEAD
         frame.add(name);
         frame.add(duration);
         frame.getContentPane().add(btnMon);
@@ -43,6 +44,8 @@ public class Main {
         frame.getContentPane().add(btnFri);
         frame.getContentPane().add(btnSat);
         frame.getContentPane().add(btnSun);
+=======
+>>>>>>> branch 'master' of https://github.com/ESGit3/StuyHacksIX.git
         frame.add(btnMon);
         frame.add(btnTues);
         frame.add(btnWed);
