@@ -34,17 +34,6 @@ public class Main {
         btnSat.setBounds(250, 300, 100, 50);
         btnSun.setBounds(350, 300, 100, 50);
 
-        frame.add(name);
-        frame.add(duration);
-<<<<<<< Updated upstream
-        frame.getContentPane().add(btnMon);
-        frame.getContentPane().add(btnTues);
-        frame.getContentPane().add(btnWed);
-        frame.getContentPane().add(btnThurs);
-        frame.getContentPane().add(btnFri);
-        frame.getContentPane().add(btnSat);
-        frame.getContentPane().add(btnSun);
-=======
         frame.add(btnMon);
         frame.add(btnTues);
         frame.add(btnWed);
@@ -52,7 +41,6 @@ public class Main {
         frame.add(btnFri);
         frame.add(btnSat);
         frame.add(btnSun);
->>>>>>> Stashed changes
 
         frame.setLayout(null);
         frame.setVisible(true);
