@@ -5,6 +5,7 @@ import java.awt.FlowLayout;
 import javax.swing.*;
 import java.awt.Graphics;
 import java.awt.GraphicsConfiguration;
+import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -116,8 +117,12 @@ public class Blacklist {
         File selectedFile = fileChooser.getSelectedFile();
         return selectedFile;
     }
+    
+    public static void openWindow() {
+    	frame.setVisible(true);
+    }
 
     public static void main(String[] args) throws Exception {
-        frame.setVisible(true);
+        openWindow();
     }
 }
