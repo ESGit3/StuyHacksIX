@@ -1,5 +1,3 @@
-//package com.sun.jna/examples;
-
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import javax.swing.*;
@@ -13,7 +11,6 @@ public class Main {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("StuyHacksIX project");
-//        frame.getContentPane().setLayout(new FlowLayout());
         name = new JTextField("name", 10);
         duration = new JTextField("duration", 10);
         btnMon = new JButton("Monday");
@@ -34,18 +31,6 @@ public class Main {
         btnSat.setBounds(250, 300, 100, 50);
         btnSun.setBounds(350, 300, 100, 50);
 
-<<<<<<< HEAD
-        frame.add(name);
-        frame.add(duration);
-        frame.getContentPane().add(btnMon);
-        frame.getContentPane().add(btnTues);
-        frame.getContentPane().add(btnWed);
-        frame.getContentPane().add(btnThurs);
-        frame.getContentPane().add(btnFri);
-        frame.getContentPane().add(btnSat);
-        frame.getContentPane().add(btnSun);
-=======
->>>>>>> branch 'master' of https://github.com/ESGit3/StuyHacksIX.git
         frame.add(btnMon);
         frame.add(btnTues);
         frame.add(btnWed);
