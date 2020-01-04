@@ -26,23 +26,23 @@ public class Main {
 
         name.setBounds(110, 50, 130, 30);
         duration.setBounds(300, 50, 130, 30);
-        btnMon.setBounds(10, 10, 100, 100);
-        btnTues.setBounds(10, 10, 100, 100);
-        btnWed.setBounds(10, 10, 100, 100);
-        btnThurs.setBounds(10, 10, 100, 100);
-        btnFri.setBounds(10, 10, 100, 100);
-        btnSat.setBounds(10, 10, 100, 100);
-        btnSun.setBounds(10, 10, 100, 100);
+        btnMon.setBounds(100, 250, 100, 50);
+        btnTues.setBounds(200, 250, 100, 50);
+        btnWed.setBounds(300, 250, 100, 50);
+        btnThurs.setBounds(400, 250, 100, 50);
+        btnFri.setBounds(150, 300, 100, 50);
+        btnSat.setBounds(250, 300, 100, 50);
+        btnSun.setBounds(350, 300, 100, 50);
 
         frame.add(name);
         frame.add(duration);
-//        frame.getContentPane().add(btnMon);
-//        frame.getContentPane().add(btnTues);
-//        frame.getContentPane().add(btnWed);
-//        frame.getContentPane().add(btnThurs);
-//        frame.getContentPane().add(btnFri);
-//        frame.getContentPane().add(btnSat);
-//        frame.getContentPane().add(btnSun);
+        frame.getContentPane().add(btnMon);
+        frame.getContentPane().add(btnTues);
+        frame.getContentPane().add(btnWed);
+        frame.getContentPane().add(btnThurs);
+        frame.getContentPane().add(btnFri);
+        frame.getContentPane().add(btnSat);
+        frame.getContentPane().add(btnSun);
 
         frame.setLayout(null);
         frame.setVisible(true);
