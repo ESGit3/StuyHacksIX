@@ -3,6 +3,8 @@ import java.time.*;
 
 public interface Task {
 	
+	public Duration timeToComplete = Duration.ofHours(1);
+	
 	public String name = "Untitled Task";
 	
 	public LocalDateTime startFrom();

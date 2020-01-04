@@ -142,7 +142,5 @@ public class Blacklist {
 
     public static void main(String[] args) throws Exception {
         openWindow();
-        Thread.sleep(30000);
-        System.out.println(Arrays.toString(getBlacklisted()));
     }
 }
