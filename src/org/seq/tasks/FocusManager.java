@@ -14,7 +14,9 @@ public class FocusManager {
 	private static boolean isMac() {
 		return (OS.contains("mac"));
 	}
-
+	private static boolean isUnix() {
+		return (OS.indexOf("nix") >= 0 || OS.indexOf("nux") >= 0 || OS.indexOf("aix") > 0 );
+	}
 	public static void main(String[] args) throws IOException {
 		ProcessBuilder processBuilder = new ProcessBuilder();
 		if (isWindows()) {
@@ -26,15 +28,13 @@ public class FocusManager {
 				String line;
 
 				while ((line = reader.readLine()) != null) {
-					line = "kill " + line;
-					System.out.println(line);
+					line = "taskkill /f /im " + line;
 					Runtime.getRuntime().exec(line);
 				}
 			}
-			System.out.println("mac");
 		}
 
-		if(isMac()) {
+		if (isMac()) {
 			processBuilder.command("bash", "-c", "pgrep Spotify | head -1");
 			var pidFromName = processBuilder.start();
 			try (var reader = new BufferedReader(
@@ -44,11 +44,22 @@ public class FocusManager {
 
 				while ((line = reader.readLine()) != null) {
 					line = "kill " + line;
-					System.out.println(line);
 					Runtime.getRuntime().exec(line);
 				}
 			}
-			System.out.println("mac");
+		}
+
+		if(isUnix()) {
+			processBuilder.command("/usr/bin/env bash", "-c", "pgrep Spotify | head -1");
+			var pidFromName = processBuilder.start();
+			try (var reader = new BufferedReader(
+					new InputStreamReader(pidFromName.getInputStream()))) {
+				String line;
+				while ((line = reader.readLine()) != null) {
+					line = "kill " + line;
+					Runtime.getRuntime().exec(line);
+				}
+			}
 		}
 	}
 }

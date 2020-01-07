@@ -49,21 +49,16 @@ public class Blacklist {
 			frame.add(this);
 			setText(f.getPath());
 			Entry thisEntry = this;
-			minusButton.addActionListener(new ActionListener() {
-
-				@Override
-				public void actionPerformed(ActionEvent arg0) {
-					entries.remove(thisEntry);
-					frame.remove(thisEntry);
-					for (int i = index; i < entries.size(); i++) {
-						Entry other = entries.get(i);
-						other.index = i;
-						other.setLocation(0, i*25);
-					}
-					updateBlacklisted();
-					resizeFrame();
+			minusButton.addActionListener(arg0 -> {
+				entries.remove(thisEntry);
+				frame.remove(thisEntry);
+				for (int i = index; i < entries.size(); i++) {
+					Entry other = entries.get(i);
+					other.index = i;
+					other.setLocation(0, i*25);
 				}
-				
+				updateBlacklisted();
+				resizeFrame();
 			});
 			updateBlacklisted();
 			resizeFrame();
@@ -100,16 +95,11 @@ public class Blacklist {
         
         frame.add(chooseFile);
         chooseFile.setBounds(0, 100, 300, 25);
-        chooseFile.addActionListener(new ActionListener() {
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				File f;
-				if ((f = getChosenFile()) != null)
-					new Entry(f);
-			}
-			
-        });
+        chooseFile.addActionListener(e -> {
+			File f;
+			if ((f = getChosenFile()) != null)
+				new Entry(f);
+		});
         resizeFrame();
         frame.setLayout(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // TODO delete this
